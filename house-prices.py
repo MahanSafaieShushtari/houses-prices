@@ -1,9 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection  import train_test_split,RandomizedSearchCV
-from sklearn.metrics import accuracy_score
-from sklearn.neural_network import MLPRegressor
+from sklearn.model_selection  import train_test_split
+
 from sklearn.ensemble import RandomForestRegressor
 import time
 import re
@@ -86,6 +85,6 @@ user_dataframe=np.asarray(user_dataframe)
 result= model.predict(user_dataframe)
 accuracy=model.score(x_test,y_test)
 for c in result:
-      print(f"{int(c)} $ your target house costs in Tehran in 2020 but at {time.ctime(time.time())} it must be {int(c*1.55)} $")
+      print(f"{int(c)} $ your target house costs in Tehran in (2021) but at {time.ctime(time.time())} it must be {int(c*1.55)} $")
            
 print(f"accuracy score of the model : {accuracy}")
